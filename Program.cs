@@ -2,38 +2,39 @@
 {
     public class Programr
     {
-        public void compare(float a, float b, float c)
+        public void compare(string a, string b, string c)
         {
-            float res = a.CompareTo(b);
+            int res = string.Compare(a,b);
             if (res == 1)
             {
-                float res2 = a.CompareTo(c);
+                int res2 = string.Compare(a,c);
                 if (res2 == 1)
                 {
-                    Console.WriteLine("First value {0} is greater then",+a);
+                    Console.WriteLine($"First value {a} is greater then");
                 }
                 else
                 {
-                    Console.WriteLine("Third value {0} is greater than",+c);
+                    Console.WriteLine($"Third value {c} is greater than");
                 }
             }
             else
             {
-                float res3 = b.CompareTo(c);
+                int res3 = string.Compare(b,c);
                 if (res3 == 1)
                 {
-                    Console.WriteLine("Second value {0} is greater than ",+b);
+                    Console.WriteLine($"Second value {b} is greater than ");
                 }
                 else
                 {
-                    Console.WriteLine("Third value {0} is grater than",+c);
+                    Console.WriteLine($"Third value {c} is grater than");
                 }
             }
+            
         }
         static void Main(string[] args)
         {
             Programr programr = new Programr();
-            programr.compare(15.1f ,20.1f,10.2f);
+            programr.compare("sam","naveen","saranya");
         }
     }
 }
