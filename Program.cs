@@ -1,40 +1,37 @@
-﻿namespace GeniricMethod
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+namespace GeniricMethod
 {
-    public class Programr
+    public class Program
     {
-        public void compare(string a, string b, string c)
+        public void Calculation<T>(T a, T b, T c)
         {
-            int res = string.Compare(a,b);
-            if (res == 1)
-            {
-                int res2 = string.Compare(a,c);
-                if (res2 == 1)
-                {
-                    Console.WriteLine($"First value {a} is greater then");
-                }
-                else
-                {
-                    Console.WriteLine($"Third value {c} is greater than");
-                }
-            }
-            else
-            {
-                int res3 = string.Compare(b,c);
-                if (res3 == 1)
-                {
-                    Console.WriteLine($"Second value {b} is greater than ");
-                }
-                else
-                {
-                    Console.WriteLine($"Third value {c} is grater than");
-                }
-            }
-            
+            a = a;
+            b = b;
+            c = c;
+            List<T> list = new List<T>();
+            list.Add(a);
+            list.Add(b);
+            list.Add(c);
+            var Max_value = list.Max();
+            Console.WriteLine(Max_value);
+
         }
         static void Main(string[] args)
         {
-            Programr programr = new Programr();
-            programr.compare("sam","naveen","saranya");
+            Program program = new Program();
+            Console.WriteLine("Max Value of int :");
+            List<int> use_int = new List<int>();
+            program.Calculation(1, 2, 50);
+            Console.WriteLine("\nMax value of flote :");
+            List<float> list1 = new List<float>();
+            program.Calculation(1.1, 2.2, 3.3);
+            Console.WriteLine("\nMax value of string :");
+            List<string> list = new List<string>();
+            program.Calculation("sam", "naveen", "saranya");
+
         }
     }
 }
